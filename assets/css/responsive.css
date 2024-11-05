@@ -1,0 +1,49 @@
+/* Mobile First Approach */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--background-color);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .courses-container {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .courses-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .menu-btn {
+    display: none;
+  }
+}
