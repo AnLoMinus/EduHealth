@@ -1,0 +1,1109 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffc107;
+  --background-color: #f0f7ff;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.course-container {
+  max-width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+
+.section-card {
+  background: white;
+  border-radius: 15px;
+  padding: 12px;
+  margin: 8px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+}
+
+.activity-box {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 0;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.quiz-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.quiz-option {
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quiz-option:hover {
+  background-color: #f0f0f0;
+}
+
+.emoji {
+  font-size: 1.5em;
+  margin: 0 5px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.nav-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  opacity: 0.9;
+}
+
+/* Interactive Elements */
+.interactive-game {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.memory-card {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: var(--secondary-color);
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.story {
+  background: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-question {
+  margin: 15px 0;
+}
+
+.summary-question textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.song-item {
+  padding: 10px;
+  margin: 5px 0;
+  background: #f8f8f8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.song-item:hover {
+  background: #f0f0f0;
+}
+
+.healthy-food-section {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.games-section {
+  display: grid;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.coloring-section {
+  background: #fff5e6;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.body-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.organ-explanation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.body-parts-interactive {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.body-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.body-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-intro {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.organ-explanation {
+  background: #f8f8f8;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border-right: 4px solid var(--primary-color);
+}
+
+.body-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.body-part {
+  text-align: center;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.body-part:hover {
+  transform: scale(1.05);
+}
+
+.body-part .emoji {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.breathing-section,
+.nutrition-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.explanation-box {
+  background: #f8f8f8;
+  border-right: 4px solid var(--primary-color);
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.breathing-exercise {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.exercise-instructions {
+  background: #fff5e6;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.food-categories {
+  display: grid;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.food-category {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.food-item {
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.food-item:hover {
+  transform: scale(1.05);
+}
+
+.organ-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.organ-explanation {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  border-right: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.organ-explanation h4 {
+  margin: 0 0 10px 0;
+  color: var(--text-color);
+}
+
+.organ-explanation ul {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.organ-explanation li {
+  margin: 5px 0;
+}
+
+.body-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.body-part {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.body-part .emoji {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.body-part p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.intro-banner {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.sub-text {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.fun-facts {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.fun-facts h4 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.fact-item {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fact-icon {
+  font-size: 2.2em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.fact-item p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .body-parts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.body-systems {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.system-item {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.system-icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.daily-activities {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.activity-item {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activity-icon {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.activity-item ul {
+  text-align: right;
+  padding-right: 20px;
+  margin: 10px 0;
+}
+
+.activity-item li {
+  margin: 5px 0;
+}
+
+h5 {
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .systems-grid,
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Update grid layouts for larger displays */
+@media (min-width: 1024px) {
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .breathing-process {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .digestion-process {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .food-groups .food-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .habits-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Make sections more compact */
+.section-card {
+  margin: 10px 0;
+  padding: 15px;
+}
+
+.activity-box {
+  padding: 15px;
+  margin: 10px 0;
+}
+
+/* Reduce spacing between elements */
+h2,
+h3,
+h4 {
+  margin: 10px 0;
+}
+
+.process-step,
+.process-item {
+  padding: 12px;
+  margin: 5px 0;
+}
+
+/* Make content more compact */
+ul {
+  margin: 5px 0;
+  padding-right: 20px;
+}
+
+li {
+  margin: 3px 0;
+}
+
+/* Update the breathing section layout */
+.breathing-section,
+.digestion-section,
+.nutrition-section {
+  margin: 10px 0;
+  padding: 15px;
+}
+
+.system-section,
+.digestion-section,
+.nutrition-section {
+  margin: 15px 0;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.process-steps,
+.digestion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.step,
+.digestion-item {
+  background: #f8f8f8;
+  padding: 12px;
+  border-radius: 8px;
+  border-right: 3px solid var(--primary-color);
+}
+
+.food-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.food-category {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.food-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.food-items span {
+  background: #f8f8f8;
+  padding: 6px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.habits-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.habit {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.habit-icon {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .process-steps,
+  .digestion-grid,
+  .food-categories-grid,
+  .habits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Maximize content width */
+.course-container {
+  max-width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Make sections use full width */
+.section-card {
+  margin: 8px 0;
+  padding: 12px;
+}
+
+/* Adjust grid layouts for better space usage */
+.organ-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.body-parts-grid {
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+}
+
+.facts-grid {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.systems-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.activities-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Reduce padding and margins */
+.activity-box {
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.organ-explanation,
+.body-part,
+.fact-item,
+.system-item,
+.activity-item {
+  padding: 8px;
+}
+
+/* Adjust text sizes for better fit */
+h1 {
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin: 6px 0;
+}
+
+h4 {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* Make content more compact */
+ul {
+  margin: 3px 0;
+  padding-right: 15px;
+}
+
+li {
+  margin: 2px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .body-parts-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .organ-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .body-parts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .systems-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .organ-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .body-parts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .systems-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Optimize spacing between sections */
+.fun-facts,
+.body-systems,
+.daily-activities {
+  margin-top: 15px;
+  padding: 15px;
+}
+
+/* Make cards more compact */
+.fact-item,
+.system-item,
+.activity-item {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Optimize icons and emojis */
+.emoji,
+.fact-icon,
+.system-icon,
+.activity-icon {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+  color: #aaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.large-emoji {
+  font-size: 3em;
+}
+
+.modal-sections {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.modal-section {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  border-right: 4px solid var(--primary-color);
+}
+
+.modal-section h4 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.modal-section ul {
+  padding-right: 20px;
+  margin: 0;
+}
+
+.modal-section li {
+  margin: 5px 0;
+}
+
+.body-part {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.body-part:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add these styles for the expanded habits section */
+.habits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.habit {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.habit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.habit-icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.habit h5 {
+  color: var(--primary-color);
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.habit ul {
+  padding-right: 20px;
+  margin: 10px 0;
+}
+
+.habit li {
+  margin: 8px 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .habits-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .habit {
+    padding: 12px;
+  }
+}
+
+/* Add these styles for the food categories and modal */
+.food-category {
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.food-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.food-modal-item {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.food-modal-item h5 {
+  margin: 0 0 10px 0;
+  color: var(--primary-color);
+  font-size: 1.1em;
+}
+
+.food-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.modal-description {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.food-modal-item ul {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.food-modal-item li {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+/* Add these styles for the expanded nutrition section */
+.nutrition-section {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.nutrition-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nutrition-intro p {
+  font-size: 1.1em;
+  color: var(--text-color);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.tip-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.tip-item:hover {
+  transform: translateY(-3px);
+}
+
+.tip-icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.meal-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-item h5 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.meal-item ul {
+  padding-right: 20px;
+  margin: 0;
+}
+
+.meal-item li {
+  margin: 5px 0;
+}
+
+.healthy-eating-tips {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.healthy-eating-tips h4 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .tips-grid,
+  .meals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tips-grid,
+  .meals-grid {
+    grid-template-columns: 1fr;
+  }
+}
