@@ -136,7 +136,9 @@ function createCourseCard(course) {
                       .join("")}
                 </ul>
                 <p class="age-range">גילאים: ${course.ageRange}</p>
-                <button class="enroll-button">הרשמה למסלול</button>
+                <button class="more-info-button" data-course='${JSON.stringify(
+                  course
+                )}'>הצג עוד</button>
             </div>
         </div>
     `;
@@ -148,14 +150,65 @@ function initializeCourses() {
     .map((course) => createCourseCard(course))
     .join("");
 
-  // Add click event listeners to enrollment buttons
-  document.querySelectorAll(".enroll-button").forEach((button) => {
+  // Add click event listeners to more info buttons
+  document.querySelectorAll(".more-info-button").forEach((button) => {
     button.addEventListener("click", (e) => {
-      const courseTitle = e.target
-        .closest(".course-card")
-        .querySelector("h3").textContent;
-      alert(`נרשמת בהצלחה למסלול: ${courseTitle}`);
+      const course = JSON.parse(e.target.getAttribute("data-course"));
+      openModal(course);
     });
+  });
+}
+
+function openModal(course) {
+  const modal = document.querySelector(".course-modal");
+  const modalContent = modal.querySelector(".modal-content");
+
+  // Check if the course is the first one (3-6 age range)
+  if (course.ageRange === "3-6") {
+    modalContent.innerHTML = `
+      <h2>${course.title}</h2>
+      <p>${course.description}</p>
+      <h4>נושאי לימוד:</h4>
+      <ul>
+        ${course.topics.map((topic) => `<li>${topic}</li>`).join("")}
+      </ul>
+      <h4>תוכן נוסף:</h4>
+      <div dir="rtl">
+        <h3>מסלול 1: יסודות הלמידה לגיל הרך (גיל 3-6) 🧒👶</h3>
+        <h4>1. מבוא לגוף האדם 🧠❤️</h4>
+        <ul>
+          <li>הכרת אברי הגוף: מהו מוח? איך הלב פועל? (📚 הסברים פשוטים)</li>
+          <li>אברי הגוף המרכזיים: ידיים 🖐️, רגליים 🦵, עיניים 👀, ועוד.</li>
+          <li>תפקוד בסיסי: למה אנחנו נושמים? 😮‍💨 איך הלב פועם 💓? איך הוא מזרים דם?</li>
+        </ul>
+        <h4>2. תפקוד אברי הגוף 🫁🍎</h4>
+        <ul>
+          <li>מערכת הנשימה: נשימות פשוטות ומדוע אנו זקוקים לחמצן.</li>
+          <li>התנסות מעשית: לנשום עמוק ולנשוף לאט 💨.</li>
+          <li>הכרת תזונה בריאה: מהם פירות 🍎, ירקות 🥦, ומאכלים בריאים אחרים.</li>
+          <li>משחק התאמת מזון בריא 🥕🍓.</li>
+        </ul>
+        <!-- Add more sections as needed -->
+      </div>
+      <button class="close-modal"><a href="courses/3-6/3-6.html">לפרטים נוספים</a></button>
+      <button class="close-modal">סגור</button>
+    `;
+  } else {
+    modalContent.innerHTML = `
+      <h2>${course.title}</h2>
+      <p>${course.description}</p>
+      <h4>נושאי לימוד:</h4>
+      <ul>
+        ${course.topics.map((topic) => `<li>${topic}</li>`).join("")}
+      </ul>
+      <button class="close-modal">סגור</button>
+    `;
+  }
+
+  modal.style.display = "block";
+
+  modal.querySelector(".close-modal").addEventListener("click", () => {
+    modal.style.display = "none";
   });
 }
 
