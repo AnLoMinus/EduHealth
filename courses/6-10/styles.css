@@ -1,10 +1,8 @@
 :root {
-  --primary-color: #ff9f9f;
-  --secondary-color: #ffd700;
-  --background-color: #fff5f5;
-  --text-color: #4a4a4a;
-  --accent-color: #87ceeb;
-  --success-color: #98fb98;
+  --primary-color: #4caf50;
+  --secondary-color: #ffc107;
+  --background-color: #f0f7ff;
+  --text-color: #333;
 }
 
 body {
@@ -23,11 +21,10 @@ body {
 
 .section-card {
   background: white;
-  border-radius: 25px;
-  padding: 20px;
-  margin: 15px 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  border: 3px solid var(--accent-color);
+  border-radius: 15px;
+  padding: 12px;
+  margin: 8px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -35,19 +32,12 @@ body {
   transform: translateY(-5px);
 }
 
-.section-card h2 {
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
 .activity-box {
-  border: 3px dashed var(--secondary-color);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 15px 0;
-  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 0;
+  background: rgba(76, 175, 80, 0.1);
 }
 
 .quiz-container {
@@ -83,20 +73,15 @@ body {
 .nav-button {
   background-color: var(--primary-color);
   color: white;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  display: inline-block;
-  margin: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  font-size: 1.1rem;
+  padding: 10px 20px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-button:hover {
-  transform: translateY(-3px);
-  background-color: #ff8080;
+  opacity: 0.9;
 }
 
 /* Interactive Elements */
@@ -187,29 +172,55 @@ body {
 
 .body-parts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-top: 15px;
 }
 
 .body-part {
-  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-intro {
+  background: rgba(255, 255, 255, 0.9);
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.organ-explanation {
+  background: #f8f8f8;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border-right: 4px solid var(--primary-color);
+}
+
+.body-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.body-part {
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  border: 2px solid var(--accent-color);
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
 .body-part:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .body-part .emoji {
-  font-size: 2.5em;
+  font-size: 2em;
+  display: block;
   margin-bottom: 10px;
 }
 
@@ -249,17 +260,9 @@ body {
 }
 
 .food-category {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 10px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border: 2px solid var(--success-color);
-}
-
-.food-category:hover {
-  transform: translateY(-5px);
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .food-grid {
@@ -360,11 +363,10 @@ body {
 }
 
 .fun-facts {
-  background: linear-gradient(135deg, #e6f3ff 0%, #f0f8ff 100%);
-  padding: 25px;
-  border-radius: 20px;
-  margin: 25px 0;
-  border: 3px solid var(--accent-color);
+  background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 25px;
 }
 
 .fun-facts h4 {
@@ -376,23 +378,22 @@ body {
 
 .facts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .fact-item {
   background: white;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border: 2px solid var(--primary-color);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .fact-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
 .fact-icon {
@@ -413,7 +414,7 @@ body {
   }
 
   .facts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
@@ -433,18 +434,15 @@ body {
 
 .system-item {
   background: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--accent-color);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .system-icon {
-  font-size: 2.5em;
+  font-size: 2em;
+  margin-bottom: 10px;
   display: block;
-  text-align: center;
-  margin-bottom: 15px;
 }
 
 .daily-activities {
@@ -829,15 +827,14 @@ li {
 }
 
 .modal-content {
-  background-color: #fff9f9;
+  background-color: #fefefe;
   margin: 5% auto;
-  padding: 25px;
-  border-radius: 25px;
-  width: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
   max-width: 600px;
   position: relative;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .close-modal {
@@ -1110,213 +1107,634 @@ li {
   }
 }
 
-/* Add ARIA support and keyboard navigation */
-.body-part,
-.food-category,
-.nav-button {
-  /* Existing styles... */
-  outline: none;
+/* Add these new styles for the biology course */
+.cell-types {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.body-part:focus,
-.food-category:focus,
-.nav-button:focus {
-  outline: 3px solid var(--primary-color);
-  outline-offset: 2px;
+.cell-parts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
 }
 
-/* Improve color contrast for better readability */
-:root {
-  --text-color: #222; /* Darker text color */
-  --primary-color: #2e7d32; /* Darker green for better contrast */
+.cell-part {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-/* Add smooth scrolling for better UX */
-html {
-  scroll-behavior: smooth;
+.cell-part:hover {
+  transform: translateY(-5px);
 }
 
-/* Add loading states */
-.loading {
-  opacity: 0.7;
-  pointer-events: none;
+.part-icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
 }
 
-/* Improve modal accessibility */
-.modal {
-  /* Existing styles... */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+/* Add styles for experiments and activities */
+.experiment-box {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border-right: 4px solid var(--primary-color);
 }
 
-/* Add focus trap for modals */
-.modal-content:focus {
-  outline: none;
+.experiment-steps {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
-/* Better mobile experience */
-@media (max-width: 480px) {
-  .body-parts-grid {
+.experiment-steps li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Add styles for life processes section */
+.process-box {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.process-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add styles for animals and plants section */
+.lifecycle-box {
+  background: #fff5e6;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.animal-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.animal-card:hover {
+  transform: scale(1.05);
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+  .cell-parts,
+  .process-grid,
+  .animal-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cell-parts,
+  .process-grid,
+  .animal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add these new styles for the enhanced sections */
+
+/* Body Systems Styles */
+.body-system {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.system-content {
+  margin-top: 15px;
+}
+
+/* Lifecycle Styles */
+.lifecycle-stages,
+.plant-growth {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.stage,
+.growth-stage {
+  text-align: center;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.stage:hover,
+.growth-stage:hover {
+  transform: translateY(-5px);
+}
+
+.stage-icon {
+  font-size: 2.5em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Process Box Styles */
+.process-explanation {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Animal Cards Enhanced Styles */
+.animal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.animal-icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.animal-card ul {
+  text-align: right;
+  width: 100%;
+}
+
+/* Experiment Box Enhanced Styles */
+.experiment-box {
+  border-right: 4px solid var(--primary-color);
+  margin: 15px 0;
+}
+
+.experiment-steps {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .lifecycle-stages,
+  .plant-growth {
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .modal-content {
-    width: 95%;
-    margin: 2.5% auto;
+  .stage,
+  .growth-stage {
+    width: 100%;
+  }
+}
+
+/* Add these new styles for the enhanced animals section */
+.animal-examples {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.example-icon {
+  font-size: 1.5em;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.example-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Update animal-card styles */
+.animal-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.animal-icon {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+.animal-card h4 {
+  color: var(--primary-color);
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.animal-card ul {
+  text-align: right;
+  padding-right: 20px;
+  margin: 10px 0;
+}
+
+.animal-card li {
+  margin: 8px 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* Update animal-grid layout */
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .animal-icon {
+    font-size: 3em;
+  }
+
+  .example-icon {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .animal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .animal-card {
     padding: 15px;
   }
-
-  .fact-item,
-  .system-item,
-  .activity-item {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  .large-emoji {
-    font-size: 2.5em;
-  }
 }
 
-/* Add touch-friendly targets */
-@media (hover: none) {
-  .nav-button,
-  .body-part,
-  .food-category {
-    min-height: 44px; /* Apple's recommended minimum */
-    min-width: 44px;
-  }
+/* Add these styles for the new sections */
+
+/* Experiments Section */
+.experiments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 15px 0;
 }
 
-/* Use hardware acceleration for animations */
-.section-card:hover,
-.body-part:hover,
-.food-category:hover {
+.experiment-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.experiment-card:hover {
   transform: translateY(-5px);
-  will-change: transform;
 }
 
-/* Optimize transitions */
-.modal {
-  transition: opacity 0.2s ease;
-  will-change: opacity;
+.experiment-content {
+  margin-top: 15px;
 }
 
-/* Reduce paint operations */
-.fact-item,
-.system-item,
-.activity-item {
-  transform: translateZ(0);
-  backface-visibility: hidden;
+/* Games Section */
+.games-section {
+  margin: 20px 0;
 }
 
-/* Add hover states */
-.nav-button:hover {
-  background-color: var(--primary-color);
-  opacity: 0.9;
-  transform: translateY(-2px);
-  transition: all 0.2s ease;
+.memory-games,
+.quiz-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 15px 0;
 }
 
-/* Add active states */
-.nav-button:active {
-  transform: translateY(0);
+.game-card,
+.quiz-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-/* Add loading states */
-.loading-indicator {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  border-top-color: transparent;
-  animation: spin 1s linear infinite;
+.game-card:hover,
+.quiz-card:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+.play-button,
+.quiz-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.play-button:hover,
+.quiz-button:hover {
+  background: #3d8b40;
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-content {
+  margin-top: 15px;
+}
+
+.materials-list {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.materials-list li {
+  margin: 8px 0;
+  padding-right: 20px;
+  position: relative;
+}
+
+.materials-list li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .experiments-grid,
+  .memory-games,
+  .quiz-section,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Add feedback for interactive elements */
-.interactive-element {
-  position: relative;
-  overflow: hidden;
+@media (max-width: 480px) {
+  .experiments-grid,
+  .memory-games,
+  .quiz-section,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experiment-card,
+  .game-card,
+  .quiz-card,
+  .project-card {
+    padding: 15px;
+  }
 }
 
-.interactive-element::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s;
+/* Animal Interactions Styles */
+.animal-interactions {
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+  border-radius: 15px;
+  margin: 20px 0;
 }
 
-.interactive-element:active::after {
-  width: 100%;
-  height: 100%;
+.habitats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 15px 0;
 }
 
-/* Course Description Styles - מעוצב במיוחד לילדים */
+.habitat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.habitat-card:hover {
+  transform: translateY(-5px);
+}
+
+.habitat-icon {
+  font-size: 2.5em;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.habitat-animals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.animal-tag {
+  background: #f0f7ff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+
+.adaptations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.adaptation-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.facts-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.fact-slide {
+  min-width: 280px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  scroll-snap-align: start;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fact-icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.game-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-icon {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .habitats-grid,
+  .adaptations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fact-slide {
+    min-width: 240px;
+  }
+}
+
+/* Course Description Styles */
 .course-description {
-  background: linear-gradient(135deg, #fff9f9 0%, #ffe6e6 100%);
-  border-radius: 25px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
   padding: 2rem;
   margin: 2rem 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  border: 3px solid #ffb6c1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .course-description > p {
-  font-size: 1.3rem;
-  line-height: 1.7;
-  color: #5a5a5a;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2c3e50;
   margin-bottom: 2rem;
   text-align: center;
 }
 
 .description-highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .highlight-item {
   background-color: white;
-  border-radius: 20px;
-  padding: 1.8rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
 .highlight-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .highlight-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: block;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .highlight-item h4 {
-  color: var(--primary-color);
-  font-size: 1.4rem;
-  margin: 0.8rem 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
   text-align: center;
   position: relative;
 }
@@ -1324,140 +1742,83 @@ html {
 .highlight-item h4::after {
   content: "";
   display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  margin: 0.8rem auto;
-  border-radius: 4px;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.highlight-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.highlight-item ul li {
+  position: relative;
+  padding-right: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #546e7a;
+  line-height: 1.4;
+}
+
+.highlight-item ul li::before {
+  content: "✦";
+  position: absolute;
+  right: 0;
+  color: #4caf50;
+  font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-description {
+    padding: 1.5rem;
+  }
+
+  .description-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-item {
+    padding: 1.2rem;
+  }
+
+  .course-description > p {
+    font-size: 1.1rem;
+  }
 }
 
 /* Animation */
-@keyframes bounce {
-  0%,
-  100% {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(-5px);
-  }
 }
 
-.emoji {
-  display: inline-block;
-  animation: bounce 2s infinite;
+.course-description {
+  animation: fadeIn 0.8s ease-out;
 }
 
-/* Additional Styles for Interactive Elements */
-.game-card {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  border: 2px solid var(--secondary-color);
-  margin: 10px 0;
+.highlight-item {
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
 }
 
-.game-card:hover {
-  transform: scale(1.05);
+.highlight-item:nth-child(1) {
+  animation-delay: 0.2s;
 }
 
-.experiment-box {
-  background: #f0f8ff;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 15px 0;
-  border: 2px dashed var(--accent-color);
+.highlight-item:nth-child(2) {
+  animation-delay: 0.4s;
 }
 
-.experiment-steps li {
-  background: white;
-  padding: 10px 15px;
-  margin: 8px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Story Section Styles */
-.story {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--primary-color);
-}
-
-.story h3 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-/* Quiz Section Styles */
-.quiz-option {
-  background: white;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 2px solid var(--accent-color);
-}
-
-.quiz-option:hover {
-  background-color: #f0f8ff;
-}
-
-/* Additional Interactive Elements */
-.interactive-element {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.interactive-element:hover {
-  transform: scale(1.05);
-}
-
-/* Accessibility Improvements */
-button,
-a {
-  padding: 12px 20px;
-  font-size: 1.1rem;
-}
-
-input,
-select {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 8px;
-}
-
-/* Focus States */
-*:focus {
-  outline: 3px solid var(--accent-color);
-  outline-offset: 2px;
-}
-
-/* Print Styles */
-@media print {
-  .nav-button,
-  .game-card,
-  .interactive-element {
-    display: none;
-  }
-
-  body {
-    background: white;
-    color: black;
-  }
-
-  .section-card {
-    break-inside: avoid;
-    border: 1px solid #ccc;
-  }
+.highlight-item:nth-child(3) {
+  animation-delay: 0.6s;
 }
