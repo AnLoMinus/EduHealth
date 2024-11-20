@@ -290,7 +290,7 @@ function getModalContentByAgeRange(course) {
       </div>
       <div class="modal-footer">
         <button class="close-modal">סגור</button>
-        <a href="courses/18+/18+.html" class="modal-action-btn">מעבר למסלול</a>
+        <a href="courses/18-Plus/18-Plus.html" class="modal-action-btn">מעבר למסלול</a>
       </div>
     `,
     "18++": `

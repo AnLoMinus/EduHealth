@@ -25,6 +25,42 @@
     <!-- Header -->
     <header class="main-header">
         <nav class="nav-container">
+            <!-- Language Switcher Section -->
+            <div class="custom-translate">
+                <div id="google_translate_element"></div>
+            </div>
+
+            <style>
+                /* Style for Custom Language Switcher */
+                .custom-translate {
+                    display: flex;
+                    justify-content: center;
+                    /* margin-top: 20px; */
+                    padding: 5px;
+                    background-color: rgba(255, 255, 198, 0.488);
+                    border-radius: 18px;
+                    border: 2px solid #0000006c;
+                    /* width: 100%; */
+                    /* margin: 10px; */
+                    left: 50px;
+                    right: 50px;
+                }
+            </style>
+
+            <!-- Google Translate Script -->
+            <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'he',
+                        includedLanguages: 'en,he,ar,zh-CN,ru', /* שפות: אנגלית, ערבית, סינית פשוטה, רוסית */
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                        autoDisplay: false
+                    }, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
             <div class="logo">
                 <a href="/">
                     <span class="logo-icon">🎓</span>
@@ -110,7 +146,10 @@
         <div class="hero-content">
             <h1>מסלולי לימוד לפי גיל</h1>
             <p>תוכניות לימוד מותאמות אישית לכל הגילאים</p>
-            <button class="cta-button">התחל ללמוד</button>
+            <button class="cta-button">
+                <span>🚀</span>
+                <a href="#courses">התחל ללמוד</a>
+            </button>
         </div>
     </section>
 
@@ -346,6 +385,7 @@
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/courses.js"></script>
+    <script src="assets/js/translator.js"></script>
 </body>
 
 </html>
