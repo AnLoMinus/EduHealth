@@ -30,7 +30,7 @@ const courses = [
       "מערכות גוף פשוטות",
       "בעלי חיים וצמחים",
       "תהליכי חיים בסיסיים",
-      "ניסויים ביתיים ותצפיות",
+      "ניסוים ביתיים ותצפיות",
     ],
     ageRange: "6-10",
     highlights: ["ניסויים מעשיים", "פעילויות חקר", "למידה חווייתית"],
@@ -163,53 +163,201 @@ function openModal(course) {
   const modal = document.querySelector(".course-modal");
   const modalContent = modal.querySelector(".modal-content");
 
-  // Check if the course is the first one (3-6 age range)
-  if (course.ageRange === "3-6") {
-    modalContent.innerHTML = `
-      <h2>${course.title}</h2>
-      <p>${course.description}</p>
-      <h4>נושאי לימוד:</h4>
-      <ul>
-        ${course.topics.map((topic) => `<li>${topic}</li>`).join("")}
-      </ul>
-      <h4>תוכן נוסף:</h4>
-      <div dir="rtl">
-        <h3>מסלול 1: יסודות הלמידה לגיל הרך (גיל 3-6) 🧒👶</h3>
-        <h4>1. מבוא לגוף האדם 🧠❤️</h4>
-        <ul>
-          <li>הכרת אברי הגוף: מהו מוח? איך הלב פועל? (📚 הסברים פשוטים)</li>
-          <li>אברי הגוף המרכזיים: ידיים 🖐️, רגליים 🦵, עיניים 👀, ועוד.</li>
-          <li>תפקוד בסיסי: למה אנחנו נושמים? 😮‍💨 איך הלב פועם 💓? איך הוא מזרים דם?</li>
-        </ul>
-        <h4>2. תפקוד אברי הגוף 🫁🍎</h4>
-        <ul>
-          <li>מערכת הנשימה: נשימות פשוטות ומדוע אנו זקוקים לחמצן.</li>
-          <li>התנסות מעשית: לנשום עמוק ולנשוף לאט 💨.</li>
-          <li>הכרת תזונה בריאה: מהם פירות 🍎, ירקות 🥦, ומאכלים בריאים אחרים.</li>
-          <li>משחק התאמת מזון בריא 🥕🍓.</li>
-        </ul>
-        <!-- Add more sections as needed -->
-      </div>
-      <button class="close-modal"><a href="courses/3-6/3-6.html">לפרטים נוספים</a></button>
-      <button class="close-modal">סגור</button>
-    `;
-  } else {
-    modalContent.innerHTML = `
-      <h2>${course.title}</h2>
-      <p>${course.description}</p>
-      <h4>נושאי לימוד:</h4>
-      <ul>
-        ${course.topics.map((topic) => `<li>${topic}</li>`).join("")}
-      </ul>
-      <button class="close-modal">סגור</button>
-    `;
-  }
+  // Get the appropriate modal content based on age range
+  const modalHTML = getModalContentByAgeRange(course);
 
-  modal.style.display = "block";
+  modalContent.innerHTML = modalHTML;
+  modal.style.display = "flex";
 
-  modal.querySelector(".close-modal").addEventListener("click", () => {
-    modal.style.display = "none";
+  // Add active class after a small delay for animation
+  setTimeout(() => {
+    modal.classList.add("active");
+  }, 10);
+
+  // Close modal handlers
+  const closeButtons = modal.querySelectorAll(".close-modal");
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modal.classList.remove("active");
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 300);
+    });
   });
+}
+
+function getModalContentByAgeRange(course) {
+  const modalTemplates = {
+    "3-6": `
+      <div class="modal-header">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+      </div>
+      <div class="modal-body">
+        <h3>תוכנית הלימודים</h3>
+        <div class="curriculum-section">
+          <h4>1. מבוא לגוף האדם 🧠❤️</h4>
+          <ul>
+            <li>הכרת אברי הגוף העיקריים</li>
+            <li>משחקי למידה אינטראקטיביים</li>
+            <li>סיפורים מאוירים על גוף האדם</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="close-modal">סגור</button>
+        <a href="courses/3-6/3-6.html" class="modal-action-btn">מעבר למסלול</a>
+      </div>
+    `,
+    "6-10": `
+      <div class="modal-header">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+      </div>
+      <div class="modal-body">
+        <h3>תוכנית הלימודים</h3>
+        <div class="curriculum-section">
+          <h4>1. יסודות הביולוגיה 🔬</h4>
+          <ul>
+            <li>מבנה התא</li>
+            <li>ניסויים מדעיים פשוטים</li>
+            <li>עולם המיקרוסקופ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="close-modal">סגור</button>
+        <a href="courses/6-10/6-10.html" class="modal-action-btn">מעבר למסלול</a>
+      </div>
+    `,
+    "10-14": `
+      <div class="modal-header">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+      </div>
+      <div class="modal-body">
+        <h3>תוכנית הלימודים</h3>
+        <div class="curriculum-section">
+          <h4>1. ביולוגיה מתקדמת 🧬</h4>
+          <ul>
+            <li>מערכות בגוף האדם</li>
+            <li>גנטיקה בסיסית</li>
+            <li>אבולוציה</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="close-modal">סגור</button>
+        <a href="courses/10-14/10-14.html" class="modal-action-btn">מעבר למסלול</a>
+      </div>
+    `,
+    "14-18": `
+      <div class="modal-header">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+      </div>
+      <div class="modal-body">
+        <h3>תוכנית הלימודים</h3>
+        <div class="curriculum-section">
+          <h4>1. מדעי החיים המתקדמים 🔬</h4>
+          <ul>
+            <li>ביוכימיה</li>
+            <li>מיקרוביולוגיה</li>
+            <li>פיזיולוגיה</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="close-modal">סגור</button>
+        <a href="courses/14-18/14-18.html" class="modal-action-btn">מעבר למסלול</a>
+      </div>
+    `,
+    "18+": `
+      <div class="modal-header">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+      </div>
+      <div class="modal-body">
+        <h3>תוכנית הלימודים</h3>
+        <div class="curriculum-section">
+          <h4>1. רפואה קלינית 🏥</h4>
+          <ul>
+            <li>אנטומיה מתקדמת</li>
+            <li>פתולוגיה</li>
+            <li>פרמקולוגיה</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="close-modal">סגור</button>
+        <a href="courses/18+/18+.html" class="modal-action-btn">מעבר למסלול</a>
+      </div>
+    `,
+    "18++": `
+      <div class="modal-header">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+      </div>
+      <div class="modal-body">
+        <h3>תוכנית הלימודים</h3>
+        <div class="curriculum-section">
+          <h4>1. רפואה משלימה 🌱</h4>
+          <ul>
+            <li>צמחי מרפא</li>
+            <li>רפואה סינית</li>
+            <li>נטורופתיה</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="close-modal">סגור</button>
+        <a href="courses/18++/18++.html" class="modal-action-btn">מעבר למסלול</a>
+      </div>
+    `,
+    "18+++": `
+      <div class="modal-header">
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+      </div>
+      <div class="modal-body">
+        <h3>תוכנית הלימודים</h3>
+        <div class="curriculum-section">
+          <h4>1. בריאות הנפש 🧠</h4>
+          <ul>
+            <li>פסיכולוגיה בסיסית</li>
+            <li>טכניקות הרפיה</li>
+            <li>מיינדפולנס</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="close-modal">סגור</button>
+        <a href="courses/18+++/18+++.html" class="modal-action-btn">מעבר למסלול</a>
+      </div>
+    `,
+  };
+
+  return (
+    modalTemplates[course.ageRange] ||
+    `
+    <div class="modal-header">
+      <h2>${course.title}</h2>
+      <p>${course.description}</p>
+    </div>
+    <div class="modal-body">
+      <h3>נושאי לימוד:</h3>
+      <ul>
+        ${course.topics.map((topic) => `<li>${topic}</li>`).join("")}
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button class="close-modal">סגור</button>
+      <a href="courses/${
+        course.ageRange
+      }/index.html" class="modal-action-btn">מעבר למסלול</a>
+    </div>
+  `
+  );
 }
 
 // Initialize when DOM is loaded
